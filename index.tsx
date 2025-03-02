@@ -241,7 +241,7 @@ function EmojiModal({ rootProps, close, message, guilds: initialGuilds }: EmojiM
                 if (emoji) {
                     await addReaction(message, `${emoji.name}:${emoji.id}`);
                     logger.info(`Added reaction ${emoji.name} for character ${char}`);
-                    await new Promise(resolve => setTimeout(resolve, 150));
+                    await new Promise(resolve => setTimeout(resolve, 250));
                 } else {
                     logger.warn(`Could not find emoji ${emojiName} in guild ${guild.id}`);
                 }
